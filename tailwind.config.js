@@ -6,7 +6,8 @@ module.exports = {
       colors: {
         "custom-red": "rgb(255, 70, 37) !important",
         "custom-blue": "rgb(44, 135, 255) !important",
-        "custom-white": "fff# !important",
+        "custom-white": "#fff !important",
+        "custom-black": "#444 !important",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -14,6 +15,9 @@ module.exports = {
       },
       transitionProperty: {
         transform: "transform",
+      },
+      borderRadius: {
+        "border-rad": "0.5em !important",
       },
     },
   },
