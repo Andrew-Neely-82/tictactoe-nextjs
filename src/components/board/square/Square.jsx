@@ -1,6 +1,13 @@
+import { Button } from "@mui/material";
+
 const Square = () => {
-  return (
-    <div>Square</div>
-  )
-}
-export default Square
+  const props = {
+    className: style,
+    variant: "contained",
+    onClick: onClick,
+  };
+  
+  return <Button {...props}>{value}</Button>;
+};
+
+export default Square;
