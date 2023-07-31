@@ -1,0 +1,44 @@
+@import "./functions";
+@import "./variables";
+
+@mixin bg-light {
+  background: map($lightMode, bg);
+}
+
+@mixin bg-dark {
+  background: map($darkMode, bg);
+}
+
+@mixin light {
+  background: map($lightMode, white);
+}
+
+@mixin darkMode {
+  background: map($darkMode, container);
+
+  &.score:hover,
+  &.score:focus,
+  &.score:active {
+    background: map($darkMode, 333);
+  }
+}
+
+@mixin no-shadow {
+  box-shadow: 0 0 0 transparent !important;
+  background: map($darkMode, container) !important;
+}
+
+@mixin shadow {
+  background: map($lightMode, white);
+  box-shadow: 0 0 8px map($darkMode, 888);
+}
+
+@mixin modal-light {
+  background: white;
+  color: black;
+}
+
+@mixin modal-dark {
+  background: #444 !important;
+  color: white;
+}

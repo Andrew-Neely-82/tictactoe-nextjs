@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "tailwindcss/base";
+@import "./variables";
+@import "./functions";
+@import "./mixins";
+
+// :root {
+//   --foreground-rgb: 0, 0, 0;
+//   --background-start-rgb: 214, 219, 220;
+//   --background-end-rgb: 255, 255, 255;
+// }
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --foreground-rgb: 255, 255, 255;
+//     --background-start-rgb: 0, 0, 0;
+//     --background-end-rgb: 0, 0, 0;
+//   }
+// }
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #efefef;
+  margin: 0;
+}
+
+// * background classes
+
+body.bg-light {
+  @include bg-light;
+}
+
+body.bg-dark {
+  @include bg-dark;
+}
+
+// * button classes
+
+.light {
+  @include light;
+}
+
+.dark {
+  @include darkMode;
+}
+
+.no-shadow {
+  @include no-shadow;
+}
+
+.shadow {
+  @include shadow;
+}
+
+// * modal classes
+
+.modal-light {
+  background: white;
+  color: black;
+}
+
+.modal-dark {
+  background: #444 !important;
+  color: white;
+}
