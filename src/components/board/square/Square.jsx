@@ -1,4 +1,5 @@
 import { Button } from "@mui/material";
+import tailwindConfig from "../../../../tailwind.config";
 
 const Square = ({ value, onClick }) => {
   const x = "text-custom-red";

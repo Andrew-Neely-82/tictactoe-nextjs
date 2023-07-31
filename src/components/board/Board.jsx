@@ -3,13 +3,13 @@ import { Square } from "../export";
 const Board = ({ board, onClick }) => {
   return (
     <div className="grid grid-cols-3 gap-x-1 justify-center">
-      {board.map((value, index) => {
+      {board.map((value, key) => {
         const props = {
           value: value,
-          onClick: () => value === null && onClick(index),
+          onClick: () => value === null && onClick(key),
         };
 
-        return <Square className="" {...props} key={index} />;
+        return <Square {...props} key={key} />;
       })}
     </div>
   );

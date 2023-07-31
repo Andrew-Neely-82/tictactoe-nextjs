@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         "custom-red": "rgb(255, 70, 37) !important",
         "custom-blue": "rgb(44, 135, 255) !important",
-        "custom-white": "#fff !important",
+        "custom-white": "fff# !important",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

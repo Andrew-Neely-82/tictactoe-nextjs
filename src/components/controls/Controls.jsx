@@ -1,6 +1,15 @@
-const Controls = () => {
+import { ResetButton, ScoreButton, SettingsButton } from "../export";
+import { ButtonGroup } from "@mui/material";
+
+const Controls = ({ resetBoard, openSettings, clearScores }) => {
   return (
-    <div>Controls</div>
-  )
-}
-export default Controls
+    <>
+      <ButtonGroup variant="contained" aria-label="outlined primary button group">
+        <ResetButton resetBoard={resetBoard} />
+        <ScoreButton clearScores={clearScores} />
+        <SettingsButton openSettings={openSettings} />
+      </ButtonGroup>
+    </>
+  );
+};
+export default Controls;
