@@ -1,7 +1,5 @@
-import ButtonGroup from "@mui/material/ButtonGroup";
+import { ButtonGroup, Button, Box } from "@mui/material";
 import { visuallyHidden } from "@mui/utils";
-import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
 
 const ScoreBoard = ({ scores, xPlaying, onClick }) => {
   const { xScore, oScore } = scores;

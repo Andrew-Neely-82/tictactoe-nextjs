@@ -2,15 +2,14 @@ import { Square } from "../export";
 
 const Board = ({ board, onClick }) => {
   return (
-    <div className="Board__">
+    <div className="grid grid-cols-3 gap-x-1 justify-center">
       {board.map((value, index) => {
         const props = {
-          key: index,
           value: value,
           onClick: () => value === null && onClick(index),
         };
 
-        return <Square {...props} />;
+        return <Square className="" {...props} key={index} />;
       })}
     </div>
   );
