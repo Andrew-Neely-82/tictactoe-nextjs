@@ -1,7 +1,8 @@
 import { Square } from "../export";
 
 const Board = ({ board, onClick }) => {
-  const tailwind = "grid grid-cols-3 gap-x-1 justify-center my-10";
+  const flexbox = ["grid", "grid-cols-3", "justify-center"];
+  const tailwind = `${flexbox.join(" ")} w-fit my-10 m-auto`;
 
   return (
     <div className={tailwind}>

@@ -5,3 +5,4 @@ export { default as Controls } from "./controls/Controls";
 export { default as ResetButton } from "./controls/resetButton/ResetButton";
 export { default as ScoreButton } from "./controls/scoreButton/ScoreButton";
 export { default as SettingsButton } from "./controls/settingsButton/SettingsButton";
+export { default as StartModal } from "./startModal/StartModal";

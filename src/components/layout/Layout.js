@@ -1,5 +1,5 @@
 import { updateScores, winnerCheck, resetTheBoard, playerSwitch } from "./index";
-import { Board, Controls, ScoreBoard } from "../export";
+import { Board, Controls, ScoreBoard, StartModal } from "../export";
 import { useState } from "react";
 
 const Layout = () => {
@@ -17,17 +17,16 @@ const Layout = () => {
       }
     });
 
-    
     const winner = checkWinner(updatedBoard);
     updateScores(winner, scores, setScores);
     setBoard(updatedBoard);
     setXPlaying(!xPlaying);
   };
-  
+
   const clearScores = () => {
     return setScores({ xScore: 0, oScore: 0 });
   };
-  
+
   const checkWinner = winnerCheck(setGameOver);
   const resetBoard = resetTheBoard(setGameOver, setBoard);
   const switchPlayer = playerSwitch(xPlaying, setXPlaying);
@@ -36,7 +35,8 @@ const Layout = () => {
     <>
       <ScoreBoard scores={scores} xPlaying={xPlaying} onClick={switchPlayer} />
       <Board board={board} onClick={gameOver ? resetBoard : handleBoxClick} />
-      <Controls resetBoard={resetBoard} clearScores={clearScores}/>
+      <Controls resetBoard={resetBoard} clearScores={clearScores} />
+      <StartModal />
     </>
   );
 };

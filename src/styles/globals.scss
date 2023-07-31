@@ -70,3 +70,8 @@ body.bg-dark {
   background: #444 !important;
   color: white;
 }
+
+.inactive {
+  border: 0 solid transparent;
+  border-bottom: 5px solid transparent !important;
+}
