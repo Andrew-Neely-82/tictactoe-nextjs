@@ -21,7 +21,7 @@ const StartModalContents = forwardRef(({ onClick }, ref) => {
           select from the scoreboard <br />
         </span>
       </Typography>
-      <Button className="close" variant="contained" aria-label="close" onClick={onClick} sx={{ mt: 2 }}>
+      <Button className="absolute top-0 right-3 bg-custom-red min-w-0 px-4" variant="contained" aria-label="close" onClick={onClick} sx={{ mt: 2 }}>
         X
       </Button>
     </Box>

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import StartModalContents from "./StartModalContents";
+import React, { useState } from "react";
 import Modal from "@mui/material/Modal";
 
 const RulesModal = () => {

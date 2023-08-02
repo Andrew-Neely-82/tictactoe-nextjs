@@ -1,5 +1,5 @@
-import { DarkModeContext } from "@/context/DarkModeContext";
 import { scoreText, scoreBorder, scoreBorderHover, playerColor, playerBorderX, playerBorderO, flexBox } from "./styles";
+import { DarkModeContext } from "@/context/DarkModeContext";
 import { ButtonGroup, Button, Box } from "@mui/material";
 import { visuallyHidden } from "@mui/utils";
 import { useContext } from "react";
@@ -15,11 +15,12 @@ const ScoreBoard = ({ scores, xPlaying, onClick }) => {
   // * Button Score Styling
   const scoreArray = scoreText.concat(scoreBorder, scoreBorderHover);
 
-  const theme = `${darkMode ? "bg-custom-black" : " bg-custom-white"}`;
-  const scoreStyling = `w-full ${theme} ${scoreArray.join(" ")} py-4 mx-auto`;
+  const theme = `${darkMode ? "bg-custom-black" : "bg-custom-white"}`;
+  const scoreStyling = `w-full ${theme} ${scoreArray.join(" ")} py-4 mx-auto transition-all	ease-in-out`;
 
-  const scoreX = `${playerColor}-red ${playerBorderX}`;
-  const scoreO = `${playerColor}-blue ${playerBorderO}`;
+  const scoreBackgroundHover = darkMode ? "hover:contrast-125" : "hover:bg-bg-hover";
+  const scoreX = `${playerColor}-red ${playerBorderX} ${scoreBackgroundHover}`;
+  const scoreO = `${playerColor}-blue ${playerBorderO} ${scoreBackgroundHover}`;
 
   return (
     <div className="mx-auto">
