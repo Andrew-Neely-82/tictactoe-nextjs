@@ -23,7 +23,7 @@ const ScoreBoard = ({ scores, xPlaying, onClick }) => {
   const scoreO = `${playerColor}-blue ${playerBorderO} ${scoreBackgroundHover}`;
 
   return (
-    <div className="mx-auto">
+    <div>
       <ButtonGroup className={groupStyling}>
         <Button className={`${scoreStyling} ${scoreX} ${!xPlaying && styles.inactive}`} onClick={onClick}>
           X - {xScore}

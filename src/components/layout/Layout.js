@@ -32,12 +32,12 @@ const Layout = () => {
   const switchPlayer = playerSwitch(xPlaying, setXPlaying);
 
   return (
-    <>
+    <div className="flex flex-col justify-start">
       <ScoreBoard scores={scores} xPlaying={xPlaying} onClick={switchPlayer} />
       <Board board={board} onClick={gameOver ? resetBoard : handleBoxClick} />
       <Controls resetBoard={resetBoard} clearScores={clearScores} />
       <StartModal />
-    </>
+    </div>
   );
 };
 

@@ -1,6 +1,7 @@
-import React from "react";
 import Layout from "../components/layout/Layout";
 
-export default function Home() {
+const Home = () => {
   return <Layout />;
-}
+};
+
+export default Home;
