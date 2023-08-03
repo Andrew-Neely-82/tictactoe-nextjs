@@ -23,20 +23,19 @@ const ScoreBoard = ({ scores, xPlaying, onClick }) => {
     height: "64px !important",
     borderTop: "0px solid transparent !important",
     borderInline: "0px solid transparent !important",
+    borderBottomWidth: "4px !important",
     lineHeight: 2,
-    ":hover": {
-      //
-    },
+    ":hover": {},
   });
 
   return (
     <div className="mx-auto">
       <ButtonGroup className="flex justify-center items-center min-w-md w-80 border-rad m-auto my-12 shadow-md">
-        <StyledButton className={`${theme} border-solid border-b-4 hover:border-t-transparent hover:border-x-transparent hover:border-solid hover:border-b-4 py-4 mx-auto transition-all ease-in-out ${scoreX} ${!xPlaying && styles.inactive}`} onClick={onClick}>
+        <StyledButton className={`${theme} border-b-4 hover:border-t-transparent hover:border-x-transparent hover:border-solid hover:border-b-4 py-4 mx-auto transition-all ease-in-out ${scoreX} ${!xPlaying && styles.inactive}`} onClick={onClick}>
           X - {xScore}
           <Box sx={visuallyHidden}>X - {xScore}</Box>
         </StyledButton>
-        <StyledButton className={`${theme} border-solid border-b-4 hover:border-t-transparent hover:border-x-transparent hover:border-solid hover:border-b-4 py-4 mx-auto transition-all ease-in-out ${scoreO} ${xPlaying && styles.inactive}`} onClick={onClick}>
+        <StyledButton className={`${theme} border-b-4 hover:border-t-transparent hover:border-x-transparent hover:border-solid hover:border-b-4 py-4 mx-auto transition-all ease-in-out ${scoreO} ${xPlaying && styles.inactive}`} onClick={onClick}>
           O - {oScore}
           <Box sx={visuallyHidden}> O - {oScore}</Box>
         </StyledButton>

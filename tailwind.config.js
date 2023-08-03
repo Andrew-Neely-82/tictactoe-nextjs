@@ -28,6 +28,9 @@ module.exports = {
         DEFAULT: "250ms !important",
         all: "",
       },
+      borderWidth: {
+        DEFAULT: "4px !important",
+      },
     },
   },
   plugins: [],
