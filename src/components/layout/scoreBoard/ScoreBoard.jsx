@@ -2,9 +2,9 @@ import { playerColor, playerBorderX, playerBorderO } from "./styles";
 import { DarkModeContext } from "@/context/DarkModeContext";
 import { ButtonGroup, Button, Box } from "@mui/material";
 import { visuallyHidden } from "@mui/utils";
-import { useContext } from "react";
 import styles from "./style.module.scss";
 import styled from "@emotion/styled";
+import { useContext } from "react";
 
 const ScoreBoard = ({ scores, xPlaying, onClick }) => {
   const { xScore, oScore } = scores;
@@ -23,7 +23,7 @@ const ScoreBoard = ({ scores, xPlaying, onClick }) => {
     height: "64px !important",
     borderTop: "0px solid transparent !important",
     borderInline: "0px solid transparent !important",
-    borderBottomWidth: "4px !important",
+    borderBottomWidth: "4px transparent !important",
     lineHeight: 2,
     ":hover": {},
   });
