@@ -32,7 +32,7 @@ module.exports = {
         DEFAULT: "4px !important",
       },
       margin: {
-        "m-2": "0.5rem !important",
+        "custom-margin": "0.5rem !important",
       },
     },
   },

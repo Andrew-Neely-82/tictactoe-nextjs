@@ -10,18 +10,27 @@ const Square = ({ value, onClick }) => {
   const o = "text-custom-blue";
   const size = "w-20 h-20";
   const bgTheme = `${darkMode ? "bg-custom-black" : "bg-custom-white"}`;
-  const effects = `transform transition-transform transition-all ease-in-out hover:scale-110`;
+  const effects = `transform transition-transform hover:scale-110`;
   const font = "text-center text-5xl font-bold";
   const border = "border-none rounded-10%";
-  const tailwind = `${bgTheme} ${size} shadow-md ${font} ${border} m-2 ${effects}`;
+  const tailwind = `${bgTheme} ${size} shadow-md ${font} ${border} ${effects}`;
+
+  const sx = {
+    fontSize: "48px !important",
+    margin: "0.5rem !important",
+  };
 
   const props = {
-    className: `${value === "X" ? x : o} ${tailwind}`,
+    sx: sx,
     variant: "contained",
     onClick: onClick,
   };
 
-  return <Button {...props}>{value}</Button>;
+  return (
+    <Button className={`${value === "X" ? x : o} ${tailwind}`} {...props}>
+      {value}
+    </Button>
+  );
 };
 
 export default Square;
