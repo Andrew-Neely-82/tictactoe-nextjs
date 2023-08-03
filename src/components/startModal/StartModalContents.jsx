@@ -3,6 +3,21 @@ import { style, descriptionStyle } from "./style";
 import React, { forwardRef } from "react";
 
 const StartModalContents = forwardRef(({ onClick }, ref) => {
+  const buttonSX = {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    mt: 2,
+    mr: 2,
+  };
+
+  const ButtonProps = {
+    className: "bg-custom-red min-w-0 px-4",
+    variant: "contained",
+    sx: buttonSX,
+    onClick: onClick,
+  };
+
   return (
     <Box ref={ref} sx={style}>
       <Typography id="modal-modal-title" variant="h5" component="h2" sx={{ py: 2, textAlign: "center" }}>
@@ -21,7 +36,7 @@ const StartModalContents = forwardRef(({ onClick }, ref) => {
           select from the scoreboard <br />
         </span>
       </Typography>
-      <Button className="absolute top-0 right-3 bg-custom-red min-w-0 px-4" variant="contained" aria-label="close" onClick={onClick} sx={{ mt: 2 }}>
+      <Button {...ButtonProps} aria-label="close">
         X
       </Button>
     </Box>
