@@ -1,4 +1,4 @@
-import { scoreText, scoreBorder, scoreBorderHover, playerColor, playerBorderX, playerBorderO, flexBox } from "./styles";
+import { scoreText, playerColor, playerBorderX, playerBorderO } from "./styles";
 import { DarkModeContext } from "@/context/DarkModeContext";
 import { ButtonGroup, Button, Box } from "@mui/material";
 import { visuallyHidden } from "@mui/utils";
@@ -9,14 +9,10 @@ const ScoreBoard = ({ scores, xPlaying, onClick }) => {
   const { xScore, oScore } = scores;
   const { darkMode } = useContext(DarkModeContext);
 
-  // * Button Group Styling - Don't touch
-  const groupStyling = `${flexBox.join(" ")}`;
-
   // * Button Score Styling
-  const scoreArray = scoreText.concat(scoreBorder, scoreBorderHover);
 
   const theme = `${darkMode ? "bg-custom-black" : "bg-custom-white"}`;
-  const scoreStyling = `w-full ${theme} ${scoreArray.join(" ")} py-4 mx-auto transition-all	ease-in-out`;
+  const scoreStyling = `w-full ${theme} border-t-transparent border-x-transparent border-solid border-b-4 hover:border-t-transparent hover:border-x-transparent hover:border-solid hover:border-b-4 py-4 mx-auto transition-all	ease-in-out`;
 
   const scoreBackgroundHover = darkMode ? "hover:contrast-125" : "hover:bg-bg-hover";
   const scoreX = `${playerColor}-red ${playerBorderX} ${scoreBackgroundHover}`;
