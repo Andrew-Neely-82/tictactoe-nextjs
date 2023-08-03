@@ -1,4 +1,4 @@
-import { backgroundChange, darkModeClasses, styling } from "./index";
+import { backgroundChange, darkModeClasses, styling, buttonSX } from "./index";
 import React, { forwardRef, useContext, useEffect } from "react";
 import { DarkModeContext } from "@/context/DarkModeContext";
 import { Box, Button, Typography } from "@mui/material";
@@ -25,7 +25,13 @@ const SettingsModalBox = forwardRef(({ onClick }, ref) => {
   };
 
   const style = styling;
-  const buttonStyling = "absolute top-3 right-3 bg-custom-red min-w-0 px-4";
+  const buttonStyling = "bg-custom-red px-4";
+
+  const buttonProps = {
+    className: buttonStyling,
+    sx: buttonSX,
+    onClick: onClick,
+  };
 
   return (
     <Box sx={style}>
@@ -38,7 +44,7 @@ const SettingsModalBox = forwardRef(({ onClick }, ref) => {
           <DarkModeToggle checked={darkMode} onChange={handleDarkModeToggle} />
         </span>
       </Typography>
-      <Button className={buttonStyling} aria-label="Close Settings" onClick={onClick}>
+      <Button {...buttonProps} aria-label="Close Settings">
         <span>X</span>
       </Button>
     </Box>

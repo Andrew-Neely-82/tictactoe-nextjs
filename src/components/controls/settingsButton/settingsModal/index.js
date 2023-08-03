@@ -60,3 +60,12 @@ export const styling = {
   boxShadow: 24,
   p: 4,
 };
+
+export const buttonSX = {
+  position: "absolute",
+  top: 0,
+  right: 0,
+  minWidth: "1rem !important",
+  mt: 1.5,
+  mr: 1.5,
+};
