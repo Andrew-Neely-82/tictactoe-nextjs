@@ -7,12 +7,13 @@ const StartModalContents = forwardRef(({ onClick }, ref) => {
     position: "absolute",
     top: 0,
     right: 0,
+    minWidth: "1rem !important",
     mt: 2,
     mr: 2,
   };
 
   const ButtonProps = {
-    className: "bg-custom-red min-w-0 px-4",
+    className: "bg-custom-red px-4",
     variant: "contained",
     sx: buttonSX,
     onClick: onClick,
