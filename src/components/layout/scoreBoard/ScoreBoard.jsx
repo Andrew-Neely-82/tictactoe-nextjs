@@ -10,7 +10,7 @@ const ScoreBoard = ({ scores, xPlaying, onClick }) => {
   const { darkMode } = useContext(DarkModeContext);
 
   // * Button Group Styling - Don't touch
-  const groupStyling = `${flexBox.join(" ")} max-w-xs border-rad m-auto my-12 shadow-md`;
+  const groupStyling = `${flexBox.join(" ")} min-w-md w-80 border-rad m-auto my-12 shadow-md`;
 
   // * Button Score Styling
   const scoreArray = scoreText.concat(scoreBorder, scoreBorderHover);
@@ -23,7 +23,7 @@ const ScoreBoard = ({ scores, xPlaying, onClick }) => {
   const scoreO = `${playerColor}-blue ${playerBorderO} ${scoreBackgroundHover}`;
 
   return (
-    <div>
+    <div className="mx-auto">
       <ButtonGroup className={groupStyling}>
         <Button className={`${scoreStyling} ${scoreX} ${!xPlaying && styles.inactive}`} onClick={onClick}>
           X - {xScore}
