@@ -24,7 +24,7 @@ const ScoreBoard = ({ scores, xPlaying, onClick }) => {
 
   return (
     <div className="mx-auto">
-      <ButtonGroup className={groupStyling.concat('min-w-md w-80 border-rad m-auto my-12 shadow-md')}>
+      <ButtonGroup className="flex justify-center items-center min-w-md w-80 border-rad m-auto my-12 shadow-md">
         <Button className={`${scoreStyling} ${scoreX} ${!xPlaying && styles.inactive}`} onClick={onClick}>
           X - {xScore}
           <Box sx={visuallyHidden}>X - {xScore}</Box>
