@@ -12,3 +12,4 @@ This app uses the following technologies:
 - SCSS
 - Material UI
 - Mui Icons
+- Tailwind CSS
