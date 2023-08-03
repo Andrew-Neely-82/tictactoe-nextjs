@@ -12,7 +12,6 @@ const ScoreBoard = ({ scores, xPlaying, onClick }) => {
   // * Button Score Styling
 
   const theme = `${darkMode ? "bg-custom-black" : "bg-custom-white"}`;
-  const scoreStyling = `w-full ${theme} border-t-transparent border-x-transparent border-solid border-b-4 hover:border-t-transparent hover:border-x-transparent hover:border-solid hover:border-b-4 py-4 mx-auto transition-all	ease-in-out`;
 
   const scoreBackgroundHover = darkMode ? "hover:contrast-125" : "hover:bg-bg-hover";
   const scoreX = `${playerColor}-red ${playerBorderX} ${scoreBackgroundHover}`;
@@ -21,11 +20,11 @@ const ScoreBoard = ({ scores, xPlaying, onClick }) => {
   return (
     <div className="mx-auto">
       <ButtonGroup className="flex justify-center items-center min-w-md w-80 border-rad m-auto my-12 shadow-md">
-        <Button className={`${scoreStyling} ${scoreX} ${!xPlaying && styles.inactive}`} onClick={onClick}>
+        <Button className={`w-full ${theme} border-t-transparent border-x-transparent border-solid border-b-4 hover:border-t-transparent hover:border-x-transparent hover:border-solid hover:border-b-4 py-4 mx-auto transition-all	ease-in-out ${scoreX} ${!xPlaying && styles.inactive}`} onClick={onClick}>
           X - {xScore}
           <Box sx={visuallyHidden}>X - {xScore}</Box>
         </Button>
-        <Button className={`${scoreStyling} ${scoreO} ${xPlaying && styles.inactive}`} onClick={onClick}>
+        <Button className={`w-full ${theme} border-t-transparent border-x-transparent border-solid border-b-4 hover:border-t-transparent hover:border-x-transparent hover:border-solid hover:border-b-4 py-4 mx-auto transition-all	ease-in-out ${scoreO} ${xPlaying && styles.inactive}`} onClick={onClick}>
           O - {oScore}
           <Box sx={visuallyHidden}> O - {oScore}</Box>
         </Button>
