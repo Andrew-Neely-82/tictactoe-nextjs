@@ -43,28 +43,28 @@ body.bg-dark {
 
 // * button classes
 
-.light {
-  @include light;
-}
+// .light {
+//   @include light;
+// }
 
-.dark {
-  @include darkMode;
-}
+// .dark {
+//   @include darkMode;
+// }
 
-.no-shadow {
-  @include no-shadow;
-}
+// .no-shadow {
+//   @include no-shadow;
+// }
 
-.shadow {
-  @include shadow;
-}
+// .shadow {
+//   @include shadow;
+// }
 
 // * modal classes
 
-.modal-light {
-  background: white;
-  color: black;
-}
+// .modal-light {
+//   background: white;
+//   color: black;
+// }
 
 .modal-dark {
   background: #444 !important;
