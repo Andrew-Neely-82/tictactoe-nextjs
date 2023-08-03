@@ -2,23 +2,29 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "tailwindcss/base";
-@import "./variables";
-@import "./functions";
-@import "./mixins";
 
-// :root {
-//   --foreground-rgb: 0, 0, 0;
-//   --background-start-rgb: 214, 219, 220;
-//   --background-end-rgb: 255, 255, 255;
-// }
+// * Variable Maps
+$colors: (
+  shadow: #888,
+);
 
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --foreground-rgb: 255, 255, 255;
-//     --background-start-rgb: 0, 0, 0;
-//     --background-end-rgb: 0, 0, 0;
-//   }
-// }
+$lightMode: (
+  bg: #efefef,
+  white: #fff,
+);
+
+$darkMode: (
+  bg: #111,
+  black: #000,
+  333: #333,
+  container: #444,
+  888: #888,
+);
+
+// * Functions
+@function map($map, $val) {
+  @return map-get($map, $val);
+}
 
 * {
   box-sizing: border-box;
@@ -33,37 +39,12 @@ body {
 // * background classes
 
 body.bg-light {
-  @include bg-light;
+  background: map($lightMode, bg);
 }
 
 body.bg-dark {
-  @include bg-dark;
+  background: map($darkMode, bg);
 }
-
-// * button classes
-
-// .light {
-//   @include light;
-// }
-
-// .dark {
-//   @include darkMode;
-// }
-
-// .no-shadow {
-//   @include no-shadow;
-// }
-
-// .shadow {
-//   @include shadow;
-// }
-
-// * modal classes
-
-// .modal-light {
-//   background: white;
-//   color: black;
-// }
 
 .modal-dark {
   background: #444 !important;
